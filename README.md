@@ -1,1 +1,9 @@
-Los archivos en los que se realizo el uso de bootstrap, son: index.html y catalogo.html
+# PreEntrega2-Montes
+
+## Descripción
+Este proyecto incluye el uso de Bootstrap en los siguientes archivos:
+
+- `index.html`
+- `catalogo.html`
+
+Bootstrap se utilizó para el diseño y la maquetación responsiva de las páginas, aplicando componentes y estilos predefinidos que optimizan la experiencia de usuario en diferentes dispositivos.
