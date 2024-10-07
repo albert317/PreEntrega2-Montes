@@ -5,115 +5,252 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de Productos - Buenos días Café</title>
-    <link rel="stylesheet" href="estilos.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+        <link rel="stylesheet" href="estilos.css" />
+
 </head>
 
 <body>
 
     <!-- Barra de navegación -->
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="catalogo.html">Productos</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="carrito.html">Carrito</a>
-        <a href="contacto.html">Contacto</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Buenos días Café</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="catalogo.html">Productos</a></li>
+                <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
     </nav>
+
     <!-- Sección de filtros y categorías -->
-    <section id="filters">
+    <section class="container my-4">
         <h2>Filtrar Productos</h2>
-        <div class="filter-options">
-            <label for="category">Categoría:</label>
-            <select id="category">
-                <option value="all">Todos</option>
-                <option value="coffee">Café</option>
-                <option value="complementary">Productos Complementarios</option>
-            </select>
-
-            <label for="price">Precio:</label>
-            <select id="price">
-                <option value="all">Todos</option>
-                <option value="low-high">Bajo a Alto</option>
-                <option value="high-low">Alto a Bajo</option>
-            </select>
-
-            <label for="popularity">Popularidad:</label>
-            <select id="popularity">
-                <option value="all">Todos</option>
-                <option value="most-popular">Más Popular</option>
-                <option value="least-popular">Menos Popular</option>
-            </select>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="category">Categoría:</label>
+                <select class="form-control" id="category">
+                    <option value="all">Todos</option>
+                    <option value="coffee">Café</option>
+                    <option value="complementary">Productos Complementarios</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="price">Precio:</label>
+                <select class="form-control" id="price">
+                    <option value="all">Todos</option>
+                    <option value="low-high">Bajo a Alto</option>
+                    <option value="high-low">Alto a Bajo</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="popularity">Popularidad:</label>
+                <select class="form-control" id="popularity">
+                    <option value="all">Todos</option>
+                    <option value="most-popular">Más Popular</option>
+                    <option value="least-popular">Menos Popular</option>
+                </select>
+            </div>
         </div>
     </section>
 
     <!-- Sección de productos -->
-    <section id="product-catalog">
-        <h1>Catálogo de Productos</h1>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="https://img.freepik.com/foto-gratis/deliciosos-granos-cafe-taza_23-2150691429.jpg" alt="Café">
-                <h3>Café de Villa Rica</h3>
-                <p>El mejor café cultivado en la región andina.</p>
-                <p>Variedad: Arábica</p>
-                <button class="cta-button">Agregar al Carrito</button>
+    <section class="container my-4">
+        <h1 class="text-center">Catálogo de Productos</h1>
+        <div class="row product-grid mt-4" >
+            <div class="col-md-3 col-sm-6">
+                <div class="card mb-4">
+                    <img class="card-img-top"
+                        src="img/cafe_sobre.webp" alt="Café">
+                    <div class="card-body">
+                        <h5 class="card-title">Café de Villa Rica</h5>
+                        <p class="card-text">El mejor café cultivado en la región andina.</p>
+                        <p class="card-text"><small class="text-muted">Variedad: Arábica</small></p>
+                        <button class="btn btn-primary">Agregar al Carrito</button>
+                    </div>
+                </div>
             </div>
-            <div class="product-card">
-                <img src="https://img.freepik.com/foto-gratis/deliciosos-granos-cafe-taza_23-2150691429.jpg" alt="Miel">
-                <h3>Miel Pura de Abeja</h3>
-                <p>Disfruta de la dulzura natural de nuestra miel pura.</p>
-                <p>Variedad: Multifloral</p>
-                <button class="cta-button">Agregar al Carrito</button>
-            </div>
-            <div class="product-card">
-                <img src="https://img.freepik.com/foto-gratis/deliciosos-granos-cafe-taza_23-2150691429.jpg" alt="Chocolate">
-                <h3>Chocolate Artesanal</h3>
-                <p>Sabores intensos y texturas suaves en cada bocado.</p>
-                <p>Variedad: 70% Cacao</p>
-                <button class="cta-button">Agregar al Carrito</button>
-            </div>
-            <div class="product-card">
-                <img src="https://img.freepik.com/foto-gratis/deliciosos-granos-cafe-taza_23-2150691429.jpg" alt="Licor de Café">
-                <h3>Licor de Café</h3>
-                <p>Una combinación perfecta de café y licor.</p>
-                <p>Variedad: Licor de Café</p>
-                <button class="cta-button">Agregar al Carrito</button>
-            </div>
-            <div class="product-card">
-                <img src="https://img.freepik.com/foto-gratis/deliciosos-granos-cafe-taza_23-2150691429.jpg" alt="Café Molido">
-                <h3>Café Molido</h3>
-                <p>Perfecto para preparar tu café favorito en casa.</p>
-                <p>Variedad: Arábica</p>
-                <button class="cta-button">Agregar al Carrito</button>
-            </div>
-            <div class="product-card">
-                <img src="https://img.freepik.com/foto-gratis/deliciosos-granos-cafe-taza_23-2150691429.jpg" alt="Café en Cápsulas">
-                <h3>Café en Cápsulas</h3>
-                <p>Comodidad y sabor en cada cápsula.</p>
-                <p>Variedad: Mezcla Especial</p>
-                <button class="cta-button">Agregar al Carrito</button>
-            </div>
-            <div class="product-card">
-                <img src="https://img.freepik.com/foto-gratis/deliciosos-granos-cafe-taza_23-2150691429.jpg" alt="Café Descafeinado">
-                <h3>Café Descafeinado</h3>
-                <p>Disfruta del sabor del café sin cafeína.</p>
-                <p>Variedad: Descafeinado</p>
-                <button class="cta-button">Agregar al Carrito</button>
-            </div>
-            <div class="product-card">
-                <img src="https://img.freepik.com/foto-gratis/deliciosos-granos-cafe-taza_23-2150691429.jpg" alt="Café Orgánico">
-                <h3>Café Orgánico</h3>
-                <p>Café cultivado sin pesticidas ni químicos.</p>
-                <p>Variedad: Orgánico</p>
-                <button class="cta-button">Agregar al Carrito</button>
-            </div></div>
-        </div>         
 
+            <div class="col-md-3 col-sm-6">
+                <div class="card mb-4">
+                    <img class="card-img-top"
+                        src="img/miel_frasco.webp" alt="Miel">
+                    <div class="card-body">
+                        <h5 class="card-title">Miel Pura de Abeja</h5>
+                        <p class="card-text">Disfruta de la dulzura natural de nuestra miel pura.</p>
+                        <p class="card-text"><small class="text-muted">Variedad: Multifloral</small></p>
+                        <button class="btn btn-primary">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card mb-4">
+                    <img class="card-img-top"
+                        src="img/barra_chocolate.jpg" alt="Chocolate">
+                    <div class="card-body">
+                        <h5 class="card-title">Chocolate Artesanal</h5>
+                        <p class="card-text">Sabores intensos y texturas suaves en cada bocado.</p>
+                        <p class="card-text"><small class="text-muted">Variedad: 70% Cacao</small></p>
+                        <button class="btn btn-primary">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card mb-4">
+                    <img class="card-img-top"
+                        src="img/licor_cafe.jpg" alt="Licor de Café">
+                    <div class="card-body">
+                        <h5 class="card-title">Licor de Café</h5>
+                        <p class="card-text">Una combinación perfecta de café y licor.</p>
+                        <p class="card-text"><small class="text-muted">Variedad: Licor de Café</small></p>
+                        <button class="btn btn-primary">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="img/cafe_arabico.webp" alt="Café Arábica">
+                    <div class="card-body">
+                        <h5 class="card-title">Café Arábica</h5>
+                        <p class="card-text">Café de alta calidad con un sabor suave y aromático.</p>
+                        <p class="card-text"><small class="text-muted">Variedad: Arábica</small></p>
+                        <button class="btn btn-primary">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="img/cafe_robusta.jpeg" alt="Café Robusta">
+                    <div class="card-body">
+                        <h5 class="card-title">Café Robusta</h5>
+                        <p class="card-text">Café con un sabor fuerte y alto contenido de cafeína.</p>
+                        <p class="card-text"><small class="text-muted">Variedad: Robusta</small></p>
+                        <button class="btn btn-primary">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="img/cafe.jpg" alt="Café Blend">
+                    <div class="card-body">
+                        <h5 class="card-title">Café Blend</h5>
+                        <p class="card-text">Mezcla de granos de café para un sabor equilibrado.</p>
+                        <p class="card-text"><small class="text-muted">Variedad: Blend</small></p>
+                        <button class="btn btn-primary">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-6">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="img/cafetera_italiana.jpg" alt="Cafetera">
+                    <div class="card-body">
+                        <h5 class="card-title">Cafetera Italiana</h5>
+                        <p class="card-text">Prepara un café delicioso con esta cafetera clásica.</p>
+                        <button class="btn btn-primary">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="img/cacao_barra.jpg" alt="Cacao en Barra">
+                    <div class="card-body">
+                        <h5 class="card-title">Cacao en Barra</h5>
+                        <p class="card-text">Cacao puro en barra para tus recetas favoritas.</p>
+                        <button class="btn btn-primary">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="img/chocolate_100.webp" alt="Chocolate 100%">
+                    <div class="card-body">
+                        <h5 class="card-title">Chocolate 100% Cacao</h5>
+                        <p class="card-text">Chocolate puro para los amantes del cacao intenso.</p>
+                        <button class="btn btn-primary">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="img/pisco_cafe.webp" alt="Pisco Macerado de Café">
+                    <div class="card-body">
+                        <h5 class="card-title">Pisco Macerado de Café</h5>
+                        <p class="card-text">Una bebida única con el sabor del café y el pisco.</p>
+                        <button class="btn btn-primary">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="img/alfajor_cafe.jpg" alt="Alfajor de Café">
+                    <div class="card-body">
+                        <h5 class="card-title">Alfajor de Café</h5>
+                        <p class="card-text">Delicioso alfajor con un toque de café.</p>
+                        <button class="btn btn-primary">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="img/propoleo.jpg" alt="Propóleo">
+                    <div class="card-body">
+                        <h5 class="card-title">Propóleo</h5>
+                        <p class="card-text">Propóleo natural para fortalecer tu sistema inmunológico.</p>
+                        <button class="btn btn-primary">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="img/chips_cacao.jpg" alt="Cacao en Chips">
+                    <div class="card-body">
+                        <h5 class="card-title">Cacao en Chips</h5>
+                        <p class="card-text">Chips de cacao perfectos para tus postres y snacks.</p>
+                        <button class="btn btn-primary">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            
+           
+        
+        </div>
+
+        <!-- Repetir para otros productos -->
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Buenos días Café. Todos los derechos reservados.</p>
+    <footer class="bg-light py-3">
+        <div class="container text-center">
+            <p>&copy; 2024 Buenos días Café. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </body>
 
 </html>
